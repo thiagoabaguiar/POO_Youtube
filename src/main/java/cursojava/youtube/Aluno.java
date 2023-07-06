@@ -5,6 +5,18 @@ public class Aluno extends Pessoa {
     private String login;
     private int totAssistido;
 
+    public Aluno(String nome, int idade, String sexo, String login) {
+
+        super(nome, idade, sexo);
+        this.login = login;
+        
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno{" + "Login=" + login + ", Nome=" + nome + ", Idade=" + idade + ", Sexo=" + sexo + ", Total Vídeos Assistidos=" + totAssistido + '}';
+    } 
+    
     protected String getLogin() {
         return this.login;
     }
@@ -23,4 +35,5 @@ public class Aluno extends Pessoa {
 
     public void viuMaisUm() {
     }
+
 }

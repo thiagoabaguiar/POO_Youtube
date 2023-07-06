@@ -8,6 +8,11 @@ public class Video implements AcoesVideo {
     private int curtidas;
     private boolean reproduzindo;
 
+    public Video(String titulo) {
+        this.titulo = titulo;
+        this.avaliacao = 1;
+    }
+
     public String getTitulo() {
         return titulo;
     }
@@ -49,15 +54,31 @@ public class Video implements AcoesVideo {
     }
 
     @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Video{");
+        sb.append("titulo=").append(titulo);
+        sb.append(", avaliacao=").append(avaliacao);
+        sb.append(", views=").append(views);
+        sb.append(", curtidas=").append(curtidas);
+        sb.append(", reproduzindo=").append(reproduzindo);
+        sb.append('}');
+        return sb.toString();
+    }    
+
+    @Override
     public void play() {
+        this.reproduzindo = true;
     }
 
     @Override
     public void pause() {
+        this.reproduzindo = false;
     }
 
     @Override
     public void like() {
+        this.curtidas++;
     }
 
 }

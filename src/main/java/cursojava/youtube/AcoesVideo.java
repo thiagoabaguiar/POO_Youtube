@@ -2,10 +2,10 @@ package cursojava.youtube;
 
 public interface AcoesVideo {
 
-    public abstract void play();
+    public void play();
 
-    public abstract void pause();
+    public void pause();
 
-    public abstract void like();
+    public void like();
 
 }
