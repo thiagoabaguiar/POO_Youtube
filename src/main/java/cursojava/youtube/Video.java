@@ -80,5 +80,5 @@ public class Video implements AcoesVideo {
     public void like() {
         this.curtidas++;
     }
-
+    
 }
