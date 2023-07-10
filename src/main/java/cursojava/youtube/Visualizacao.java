@@ -8,6 +8,8 @@ public class Visualizacao {
     public Visualizacao(Aluno espectador, Video filme) {
         this.espectator = espectador;
         this.filme = filme;
+        this.espectator.viuMaisUm();
+        this.filme.vistoMaisUm();
     }
 
     public Aluno getEspectador() {
@@ -31,16 +33,12 @@ public class Visualizacao {
         return "Visualizacao{" + "espectator=" + espectator + ", filme=" + filme + '}';
     }    
 
-    public void avaliar() {
-
-    }
+    public void avaliar() {        
+        this.filme.setAvaliacao(this.filme.getAvaliacao() + 0.1f);
+    } 
     
-    public void avaliar(int nota){
-    
-    }
-    
-    public void avaliar(float porcentagem){
-    
+    public void avaliar(float nota){
+        this.filme.setAvaliacao(this.filme.getAvaliacao() + nota);    
     }
 
 }

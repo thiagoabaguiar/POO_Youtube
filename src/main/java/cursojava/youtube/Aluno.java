@@ -9,14 +9,14 @@ public class Aluno extends Pessoa {
 
         super(nome, idade, sexo);
         this.login = login;
-        
+
     }
 
     @Override
     public String toString() {
         return "Aluno{" + "Login=" + login + ", Nome=" + nome + ", Idade=" + idade + ", Sexo=" + sexo + ", Total Vídeos Assistidos=" + totAssistido + '}';
-    } 
-    
+    }
+
     protected String getLogin() {
         return this.login;
     }
@@ -34,6 +34,7 @@ public class Aluno extends Pessoa {
     }
 
     public void viuMaisUm() {
+        setTotAssistido(getTotAssistido() + 1);
     }
 
 }

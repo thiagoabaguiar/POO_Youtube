@@ -46,6 +46,7 @@ public abstract class Pessoa {
     }
 
     protected void ganharExperiencia() {
+        setExperiencia(getExperiencia() + 0.1f);
     }
 
 }
